@@ -3,7 +3,7 @@
 # ============================================
 
 # Build stage
-FROM node:20-alpine AS builder
+FROM node:22.23.4-alpine AS builder
 
 WORKDIR /app
 
@@ -23,7 +23,7 @@ RUN npm run build
 # ============================================
 # Production stage
 # ============================================
-FROM node:20-alpine AS production
+FROM node:22.23.4-alpine AS production
 
 WORKDIR /app
 
